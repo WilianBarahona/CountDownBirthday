@@ -1,9 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>CountDown</title>
 
-</body>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="master.css">
+
+
+  </head>
+
+  <body>
+
+   <div class="container">
+      <div class="page-header">
+          <h3>Cuenta Regresiva para tu cumpleaños</h>
+      </div>
+
+
+
+
+      <div class="jumbotron">
+        <form id="formularioPrincipal">
+          <div class="form-group">
+            <div>
+              <label>Fecha de nacimiento(ejem: 03/03)</label>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" id="day" placeholder="Dia">
+              <span class="input-group-addon">-</span>
+              <input type="text" class="form-control" id="month" placeholder="Mes">
+            </div>
+          </div>
+          <button  type="submit" class="btn btn-primary">Iniciar Cuenta Regresiva</button>
+           <!--button type="submit" class="btn btn-danger">Detener</button-->
+        </form>
+      </div>
+
+      <!--div><p id="demo"></p></div-->
+      <div class="jumbotron">
+          <div class="input-group">
+            <input type="text" class="form-control" id="days" readonly="readonly" >
+            <span class="input-group-addon">-</span>
+            <input type="text" class="form-control" id="hours"  readonly="readonly">
+            <span class="input-group-addon">-</span>
+            <input type="text" class="form-control" id="minutes" readonly="readonly">
+            <span class="input-group-addon">-</span>
+            <input type="text" class="form-control" id="seconds" readonly="readonly">
+          </div>
+          
+      </div>
+
+  </body>
+
+  <script src="main.js" charset="utf-8"></script>
+
+
 </html>

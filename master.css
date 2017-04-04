@@ -1,0 +1,21 @@
+body{
+
+	background: #991;
+}
+
+.clock{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #fff;
+	font-size: 70px;
+	border: 1px solid #ccc;
+	padding: 0px 5px 0px 5px;
+}
+
+
+.Fields {
+	background-color: #E9E9E9;
+
+}
