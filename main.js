@@ -4,7 +4,7 @@ document.getElementById('formularioPrincipal').addEventListener('submit', showTi
 
 
 function showTime(e){
-	 var time;
+
 	 var date=new Date();
 
 	 //campurar los valores ingresados por el usuario
@@ -43,14 +43,23 @@ function showTime(e){
 	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 	  // mostrar el resultado en el monitor principal 
-	  time=days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+	  if (monthActual==monthEntered && dayActual==dayEntered) {
+	  	 document.getElementById("days").value=0 + "d"
+		 document.getElementById("hours").value=0 + "h"
+		 document.getElementById("minutes").value=0 + "m"
+		 document.getElementById("seconds").value=0 + "s"
+	  	
+	  }else{
+	  	 document.getElementById("days").value=days + "d"
+		 document.getElementById("hours").value=hours + "h"
+		 document.getElementById("minutes").value=minutes + "m"
+		 document.getElementById("seconds").value=seconds + "s"
+	  }
+	 
 
 
 
-	  document.getElementById("days").value=days + "d"
-	  document.getElementById("hours").value=hours + "h"
-	  document.getElementById("minutes").value=minutes + "m"
-	  document.getElementById("seconds").value=seconds + "s"
+	  
 	
 
 	  // if la cuenta termino escribir feliz cumpleaños
