@@ -5,6 +5,7 @@ document.getElementById('formularioPrincipal').addEventListener('submit', showTi
 
 function showTime(e){
 
+	 document.getElementById('btn iniciar').style.display='none'
 	 var date=new Date();
 
 	 //campurar los valores ingresados por el usuario
@@ -15,11 +16,17 @@ function showTime(e){
 
 	 var yearTop
 
-	 if (monthActual<=monthEntered){
-	 	yearTop=date.getFullYear()
+	 if (monthActual<=monthEntered && dayEntered>=dayActual ){
+	 	    yearTop=date.getFullYear()
 	 }else{
-	 	yearTop=date.getFullYear()+1
+	        yearTop=date.getFullYear()+1
+
 	 }
+	 	
+	
+	 	
+
+	 //console.log(yearTop)
 
 	 // establecer la fecha tope hasta donde vamos a contar
 	 var dateTop= monthEntered + " " + dayEntered + " " +  yearTop + " 24: 00: 00";
@@ -50,18 +57,12 @@ function showTime(e){
 		 document.getElementById("seconds").value=0 + "s"
 	  	
 	  }else{
-	  	 document.getElementById("days").value=days + "d"
+	  	 document.getElementById("days").value=(days-1) + "d"
 		 document.getElementById("hours").value=hours + "h"
 		 document.getElementById("minutes").value=minutes + "m"
 		 document.getElementById("seconds").value=seconds + "s"
 	  }
 	 
-
-
-
-	  
-	
-
 	  // if la cuenta termino escribir feliz cumpleaños
 	  if (distance < 0) {
 	    clearInterval(x);
